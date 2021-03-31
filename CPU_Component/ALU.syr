@@ -1,0 +1,364 @@
+Release 14.7 - xst P.20131013 (nt64)
+Copyright (c) 1995-2013 Xilinx, Inc.  All rights reserved.
+--> Parameter TMPDIR set to xst/projnav.tmp
+
+
+Total REAL time to Xst completion: 0.00 secs
+Total CPU time to Xst completion: 0.15 secs
+ 
+--> Parameter xsthdpdir set to xst
+
+
+Total REAL time to Xst completion: 0.00 secs
+Total CPU time to Xst completion: 0.15 secs
+ 
+--> Reading design: ALU.prj
+
+TABLE OF CONTENTS
+  1) Synthesis Options Summary
+  2) HDL Compilation
+  3) Design Hierarchy Analysis
+  4) HDL Analysis
+  5) HDL Synthesis
+     5.1) HDL Synthesis Report
+  6) Advanced HDL Synthesis
+     6.1) Advanced HDL Synthesis Report
+  7) Low Level Synthesis
+  8) Partition Report
+  9) Final Report
+	9.1) Device utilization summary
+	9.2) Partition Resource Summary
+	9.3) TIMING REPORT
+
+
+=========================================================================
+*                      Synthesis Options Summary                        *
+=========================================================================
+---- Source Parameters
+Input File Name                    : "ALU.prj"
+Input Format                       : mixed
+Ignore Synthesis Constraint File   : NO
+
+---- Target Parameters
+Output File Name                   : "ALU"
+Output Format                      : NGC
+Target Device                      : xc3s1200e-4-fg320
+
+---- Source Options
+Top Module Name                    : ALU
+Automatic FSM Extraction           : YES
+FSM Encoding Algorithm             : Auto
+Safe Implementation                : No
+FSM Style                          : LUT
+RAM Extraction                     : Yes
+RAM Style                          : Auto
+ROM Extraction                     : Yes
+Mux Style                          : Auto
+Decoder Extraction                 : YES
+Priority Encoder Extraction        : Yes
+Shift Register Extraction          : YES
+Logical Shifter Extraction         : YES
+XOR Collapsing                     : YES
+ROM Style                          : Auto
+Mux Extraction                     : Yes
+Resource Sharing                   : YES
+Asynchronous To Synchronous        : NO
+Multiplier Style                   : Auto
+Automatic Register Balancing       : No
+
+---- Target Options
+Add IO Buffers                     : YES
+Global Maximum Fanout              : 100000
+Add Generic Clock Buffer(BUFG)     : 24
+Register Duplication               : YES
+Slice Packing                      : YES
+Optimize Instantiated Primitives   : NO
+Use Clock Enable                   : Yes
+Use Synchronous Set                : Yes
+Use Synchronous Reset              : Yes
+Pack IO Registers into IOBs        : Auto
+Equivalent register Removal        : YES
+
+---- General Options
+Optimization Goal                  : Speed
+Optimization Effort                : 1
+Keep Hierarchy                     : No
+Netlist Hierarchy                  : As_Optimized
+RTL Output                         : Yes
+Global Optimization                : AllClockNets
+Read Cores                         : YES
+Write Timing Constraints           : NO
+Cross Clock Analysis               : NO
+Hierarchy Separator                : /
+Bus Delimiter                      : <>
+Case Specifier                     : Maintain
+Slice Utilization Ratio            : 100
+BRAM Utilization Ratio             : 100
+Verilog 2001                       : YES
+Auto BRAM Packing                  : NO
+Slice Utilization Ratio Delta      : 5
+
+=========================================================================
+
+
+=========================================================================
+*                          HDL Compilation                              *
+=========================================================================
+Compiling vhdl file "C:/Users/ASUS/Desktop/CPU/CPU-2020-Component/CPU-Component/ALU.vhd" in Library work.
+WARNING:HDLParsers:1406 - "C:/Users/ASUS/Desktop/CPU/CPU-2020-Component/CPU-Component/ALU.vhd" Line 46. No sensitivity list and no wait in the process
+Architecture behavioral of Entity alu is up to date.
+
+=========================================================================
+*                     Design Hierarchy Analysis                         *
+=========================================================================
+Analyzing hierarchy for entity <ALU> in library <work> (architecture <behavioral>).
+
+
+=========================================================================
+*                            HDL Analysis                               *
+=========================================================================
+Analyzing Entity <ALU> in library <work> (Architecture <behavioral>).
+WARNING:Xst:819 - "C:/Users/ASUS/Desktop/CPU/CPU-2020-Component/CPU-Component/ALU.vhd" line 46: One or more signals are missing in the process sensitivity list. To enable synthesis of FPGA/CPLD hardware, XST will assume that all necessary signals are present in the sensitivity list. Please note that the result of the synthesis may differ from the initial design specification. The missing signals are:
+   <ALU_OP>, <ALU_A>, <ALU_B>
+Entity <ALU> analyzed. Unit <ALU> generated.
+
+
+=========================================================================
+*                           HDL Synthesis                               *
+=========================================================================
+
+Performing bidirectional port resolution...
+
+Synthesizing Unit <ALU>.
+    Related source file is "C:/Users/ASUS/Desktop/CPU/CPU-2020-Component/CPU-Component/ALU.vhd".
+WARNING:Xst:737 - Found 16-bit latch for signal <ALU_OUT>. Latches may be generated from incomplete case or if statements. We do not recommend the use of latches in FPGA/CPLD designs, as they may lead to timing problems.
+INFO:Xst:2371 - HDL ADVISOR - Logic functions respectively driving the data and gate enable inputs of this latch share common terms. This situation will potentially lead to setup/hold violations and, as a result, to simulation problems. This situation may come from an incomplete case statement (all selector values are not covered). You should carefully review if it was in your intentions to describe such a latch.
+    Found 16-bit addsub for signal <ALU_OUT$share0000> created at line 48.
+    Found 16-bit shifter logical left for signal <ALU_OUT$shift0003> created at line 61.
+    Found 16-bit shifter logical right for signal <ALU_OUT$shift0004> created at line 67.
+    Found 16-bit shifter arithmetic right for signal <ALU_OUT$shift0005> created at line 73.
+    Found 16-bit xor2 for signal <ALU_OUT$xor0000> created at line 94.
+    Summary:
+	inferred   1 Adder/Subtractor(s).
+	inferred   3 Combinational logic shifter(s).
+Unit <ALU> synthesized.
+
+INFO:Xst:1767 - HDL ADVISOR - Resource sharing has identified that some arithmetic operations in this design can share the same physical resources for reduced device utilization. For improved clock frequency you may try to disable resource sharing.
+
+=========================================================================
+HDL Synthesis Report
+
+Macro Statistics
+# Adders/Subtractors                                   : 1
+ 16-bit addsub                                         : 1
+# Latches                                              : 1
+ 16-bit latch                                          : 1
+# Logic shifters                                       : 3
+ 16-bit shifter arithmetic right                       : 1
+ 16-bit shifter logical left                           : 1
+ 16-bit shifter logical right                          : 1
+# Xors                                                 : 1
+ 16-bit xor2                                           : 1
+
+=========================================================================
+
+=========================================================================
+*                       Advanced HDL Synthesis                          *
+=========================================================================
+
+
+=========================================================================
+Advanced HDL Synthesis Report
+
+Macro Statistics
+# Adders/Subtractors                                   : 1
+ 16-bit addsub                                         : 1
+# Latches                                              : 1
+ 16-bit latch                                          : 1
+# Logic shifters                                       : 3
+ 16-bit shifter arithmetic right                       : 1
+ 16-bit shifter logical left                           : 1
+ 16-bit shifter logical right                          : 1
+# Xors                                                 : 1
+ 16-bit xor2                                           : 1
+
+=========================================================================
+
+=========================================================================
+*                         Low Level Synthesis                           *
+=========================================================================
+WARNING:Xst:2170 - Unit ALU : the following signal(s) form a combinatorial loop: ALU_OUT_shift0002<15>.
+
+Optimizing unit <ALU> ...
+
+Mapping all equations...
+WARNING:Xst:2170 - Unit ALU : the following signal(s) form a combinatorial loop: N50.
+Building and optimizing final netlist ...
+Found area constraint ratio of 100 (+ 5) on block ALU, actual ratio is 2.
+
+Final Macro Processing ...
+
+=========================================================================
+Final Register Report
+
+Found no macro
+=========================================================================
+
+=========================================================================
+*                           Partition Report                            *
+=========================================================================
+
+Partition Implementation Status
+-------------------------------
+
+  No Partitions were found in this design.
+
+-------------------------------
+
+=========================================================================
+*                            Final Report                               *
+=========================================================================
+Final Results
+RTL Top Level Output File Name     : ALU.ngr
+Top Level Output File Name         : ALU
+Output Format                      : NGC
+Optimization Goal                  : Speed
+Keep Hierarchy                     : No
+
+Design Statistics
+# IOs                              : 64
+
+Cell Usage :
+# BELS                             : 424
+#      GND                         : 1
+#      LUT2                        : 26
+#      LUT3                        : 84
+#      LUT4                        : 254
+#      MUXCY                       : 15
+#      MUXF5                       : 28
+#      XORCY                       : 16
+# FlipFlops/Latches                : 16
+#      LD                          : 16
+# IO Buffers                       : 64
+#      IBUF                        : 48
+#      OBUF                        : 16
+=========================================================================
+
+Device utilization summary:
+---------------------------
+
+Selected Device : 3s1200efg320-4 
+
+ Number of Slices:                      204  out of   8672     2%  
+ Number of 4 input LUTs:                364  out of  17344     2%  
+ Number of IOs:                          64
+ Number of bonded IOBs:                  64  out of    250    25%  
+    IOB Flip Flops:                      16
+
+---------------------------
+Partition Resource Summary:
+---------------------------
+
+  No Partitions were found in this design.
+
+---------------------------
+
+
+=========================================================================
+TIMING REPORT
+
+NOTE: THESE TIMING NUMBERS ARE ONLY A SYNTHESIS ESTIMATE.
+      FOR ACCURATE TIMING INFORMATION PLEASE REFER TO THE TRACE REPORT
+      GENERATED AFTER PLACE-and-ROUTE.
+
+Clock Information:
+------------------
+------------------------------------+------------------------+-------+
+Clock Signal                        | Clock buffer(FF name)  | Load  |
+------------------------------------+------------------------+-------+
+ALU_OUT_not0001(ALU_OUT_not000183:O)| NONE(*)(ALU_OUT_0)     | 16    |
+------------------------------------+------------------------+-------+
+(*) This 1 clock signal(s) are generated by combinatorial logic,
+and XST is not able to identify which are the primary clock signals.
+Please use the CLOCK_SIGNAL constraint to specify the clock signal(s) generated by combinatorial logic.
+INFO:Xst:2169 - HDL ADVISOR - Some clock signals were not automatically buffered by XST with BUFG/BUFR resources. Please use the buffer_type constraint in order to insert these buffers to the clock signals to help prevent skew problems.
+
+Asynchronous Control Signals Information:
+----------------------------------------
+No asynchronous control signals found in this design
+
+Timing Summary:
+---------------
+Speed Grade: -4
+
+   Minimum period: No path found
+   Minimum input arrival time before clock: 15.046ns
+   Maximum output required time after clock: 4.368ns
+   Maximum combinational path delay: No path found
+
+Timing Detail:
+--------------
+All values displayed in nanoseconds (ns)
+
+=========================================================================
+Timing constraint: Default OFFSET IN BEFORE for Clock 'ALU_OUT_not0001'
+  Total number of paths / destination ports: 11205 / 16
+-------------------------------------------------------------------------
+Offset:              15.046ns (Levels of Logic = 11)
+  Source:            ALU_B<14> (PAD)
+  Destination:       ALU_OUT_13 (LATCH)
+  Destination Clock: ALU_OUT_not0001 falling
+
+  Data Path: ALU_B<14> to ALU_OUT_13
+                                Gate     Net
+    Cell:in->out      fanout   Delay   Delay  Logical Name (Net Name)
+    ----------------------------------------  ------------
+     IBUF:I->O             6   1.218   0.844  ALU_B_14_IBUF (ALU_B_14_IBUF)
+     LUT4:I0->O            3   0.704   0.706  ALU_OUT_or00044 (ALU_OUT_or00044)
+     LUT3:I0->O           23   0.704   1.237  ALU_OUT_or000423 (ALU_OUT_or0004)
+     LUT3:I2->O            5   0.704   0.808  ALU_OUT_mux0005<0>7318 (ALU_OUT_mux0005<0>7318)
+     LUT3:I0->O           25   0.704   1.435  ALU_OUT_mux0005<0>7320 (N55)
+     LUT4:I0->O            1   0.704   0.000  ALU_OUT_mux0005<14>147_F (N334)
+     MUXF5:I0->O           1   0.321   0.455  ALU_OUT_mux0005<14>147 (ALU_OUT_mux0005<14>147)
+     LUT4:I2->O            1   0.704   0.455  ALU_OUT_mux0005<14>174 (ALU_OUT_mux0005<14>174)
+     LUT4:I2->O            1   0.704   0.424  ALU_OUT_mux0005<14>202_SW0 (N280)
+     LUT4:I3->O            1   0.704   0.499  ALU_OUT_mux0005<14>202 (ALU_OUT_mux0005<14>202)
+     LUT4:I1->O            1   0.704   0.000  ALU_OUT_mux0005<14>224 (ALU_OUT_mux0005<14>)
+     LD:D                      0.308          ALU_OUT_14
+    ----------------------------------------
+    Total                     15.046ns (8.183ns logic, 6.863ns route)
+                                       (54.4% logic, 45.6% route)
+
+=========================================================================
+Timing constraint: Default OFFSET OUT AFTER for Clock 'ALU_OUT_not0001'
+  Total number of paths / destination ports: 16 / 16
+-------------------------------------------------------------------------
+Offset:              4.368ns (Levels of Logic = 1)
+  Source:            ALU_OUT_15 (LATCH)
+  Destination:       ALU_OUT<15> (PAD)
+  Source Clock:      ALU_OUT_not0001 falling
+
+  Data Path: ALU_OUT_15 to ALU_OUT<15>
+                                Gate     Net
+    Cell:in->out      fanout   Delay   Delay  Logical Name (Net Name)
+    ----------------------------------------  ------------
+     LD:G->Q               1   0.676   0.420  ALU_OUT_15 (ALU_OUT_15)
+     OBUF:I->O                 3.272          ALU_OUT_15_OBUF (ALU_OUT<15>)
+    ----------------------------------------
+    Total                      4.368ns (3.948ns logic, 0.420ns route)
+                                       (90.4% logic, 9.6% route)
+
+=========================================================================
+
+
+Total REAL time to Xst completion: 7.00 secs
+Total CPU time to Xst completion: 7.33 secs
+ 
+--> 
+
+Total memory usage is 4524464 kilobytes
+
+Number of errors   :    0 (   0 filtered)
+Number of warnings :    5 (   0 filtered)
+Number of infos    :    3 (   0 filtered)
+

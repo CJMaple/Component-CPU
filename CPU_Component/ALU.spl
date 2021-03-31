@@ -1,0 +1,8 @@
+[Inputs]
+run_ALU
+=ALU_A[15:0]=
+=ALU_B[15:0]=
+=ALU_OP[15:0]=
+[Outputs]
+=ALU_OUT[15:0]=
+[BiDir]

@@ -1,0 +1,5 @@
+set -tmpdir "C:/Users/ASUS/Desktop/CPU/CPU-2020-Component/CPU-Component/xst/projnav.tmp"
+set -xsthdpdir "C:/Users/ASUS/Desktop/CPU/CPU-2020-Component/CPU-Component/xst"
+elaborate
+-ifn ALU.prj
+-ifmt mixed

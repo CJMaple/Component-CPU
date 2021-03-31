@@ -1,0 +1,4 @@
+xst -intstyle ise -ifn "C:/Users/ASUS/Desktop/CPU/CPU-2020-Component/CPU-Component/ALU.xst" -ofn "C:/Users/ASUS/Desktop/CPU/CPU-2020-Component/CPU-Component/ALU.syr" 
+vhdtdtfi -prj CPU-Component -o C:/Users/ASUS/Desktop/CPU/CPU-2020-Component/CPU-Component/ALU.tfi -module ALU -template F:/Xilinx/14.7/ISE_DS/ISE//data/tfi.tft -deleteonerror -lib work ALU.vhd 
+vhdtdtfi -lib work ALU.vhd -prj CPU-Component -o ALU.spl -module ALU -template F:/Xilinx/14.7/ISE_DS/ISE//data/splfile.tft -deleteonerror 
+spl2sym -intstyle ise -family spartan3e ALU.spl C:/Users/ASUS/Desktop/CPU/CPU-2020-Component/CPU-Component/ALU.sym 
