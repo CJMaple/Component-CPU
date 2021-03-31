@@ -1,0 +1,4 @@
+vhdl work "Memory.vhd"
+vhdl work "IR.vhd"
+vhdl work "ALU.vhd"
+vhdl work "CPU.vhd"

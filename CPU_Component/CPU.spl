@@ -1,0 +1,17 @@
+[Inputs]
+CLK
+RST
+clk0
+showCtrl
+=INPUT[15:0]=
+[Outputs]
+RAM1_EN
+RAM1_OE
+RAM1_WE
+dbc
+=ADDR[15:0]=
+=OUTPUT[15:0]=
+=stateCnt_L[6:0]=
+=stateCnt_R[6:0]=
+[BiDir]
+=DATA[15:0]=
