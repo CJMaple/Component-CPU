@@ -1,0 +1,8 @@
+EN ir NULL C:/Users/ASUS/Desktop/CPU/CPU-2020-Component/CPU-Component/IR.vhd sub00/vhpl02 1600063430
+EN cpu NULL C:/Users/ASUS/Desktop/CPU/CPU-2020-Component/CPU-Component/CPU.vhd sub00/vhpl06 1600062940
+AR cpu behavioral C:/Users/ASUS/Desktop/CPU/CPU-2020-Component/CPU-Component/CPU.vhd sub00/vhpl07 1600062941
+EN memory NULL C:/Users/ASUS/Desktop/CPU/CPU-2020-Component/CPU-Component/Memory.vhd sub00/vhpl04 1600063442
+AR ir behavioral C:/Users/ASUS/Desktop/CPU/CPU-2020-Component/CPU-Component/IR.vhd sub00/vhpl03 1600063431
+AR memory behavioral C:/Users/ASUS/Desktop/CPU/CPU-2020-Component/CPU-Component/Memory.vhd sub00/vhpl05 1600063443
+AR alu behavioral C:/Users/ASUS/Desktop/CPU/CPU-2020-Component/CPU-Component/ALU.vhd sub00/vhpl01 1600063353
+EN alu NULL C:/Users/ASUS/Desktop/CPU/CPU-2020-Component/CPU-Component/ALU.vhd sub00/vhpl00 1600063352

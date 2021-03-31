@@ -1,0 +1,29 @@
+V3 15
+FL C:/Users/ASUS/Desktop/CPU/CPU-2020-Component/CPU-Component/ALU.vhd 2020/09/13.10:07:52 P.20131013
+EN work/ALU 1600063352 \
+      FL C:/Users/ASUS/Desktop/CPU/CPU-2020-Component/CPU-Component/ALU.vhd \
+      PB ieee/std_logic_1164 1381692176 PB ieee/STD_LOGIC_UNSIGNED 1381692179
+AR work/ALU/Behavioral 1600063353 \
+      FL C:/Users/ASUS/Desktop/CPU/CPU-2020-Component/CPU-Component/ALU.vhd \
+      EN work/ALU 1600063352
+FL C:/Users/ASUS/Desktop/CPU/CPU-2020-Component/CPU-Component/CPU.vhd 2020/09/14.13:55:16 P.20131013
+EN work/CPU 1600062940 \
+      FL C:/Users/ASUS/Desktop/CPU/CPU-2020-Component/CPU-Component/CPU.vhd \
+      PB ieee/std_logic_1164 1381692176
+AR work/CPU/Behavioral 1600062941 \
+      FL C:/Users/ASUS/Desktop/CPU/CPU-2020-Component/CPU-Component/CPU.vhd \
+      EN work/CPU 1600062940 CP Memory CP ALU CP IR
+FL C:/Users/ASUS/Desktop/CPU/CPU-2020-Component/CPU-Component/IR.vhd 2020/09/13.10:10:22 P.20131013
+EN work/IR 1600063430 \
+      FL C:/Users/ASUS/Desktop/CPU/CPU-2020-Component/CPU-Component/IR.vhd \
+      PB ieee/std_logic_1164 1381692176
+AR work/IR/Behavioral 1600063431 \
+      FL C:/Users/ASUS/Desktop/CPU/CPU-2020-Component/CPU-Component/IR.vhd \
+      EN work/IR 1600063430
+FL C:/Users/ASUS/Desktop/CPU/CPU-2020-Component/CPU-Component/Memory.vhd 2020/09/14.13:25:08 P.20131013
+EN work/Memory 1600063442 \
+      FL C:/Users/ASUS/Desktop/CPU/CPU-2020-Component/CPU-Component/Memory.vhd \
+      PB ieee/std_logic_1164 1381692176
+AR work/Memory/Behavioral 1600063443 \
+      FL C:/Users/ASUS/Desktop/CPU/CPU-2020-Component/CPU-Component/Memory.vhd \
+      EN work/Memory 1600063442
