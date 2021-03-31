@@ -1,0 +1,2 @@
+vhdtdtfi -lib work IR.vhd -prj CPU-Component -o IR.spl -module IR -template F:/Xilinx/14.7/ISE_DS/ISE//data/splfile.tft -deleteonerror 
+spl2sym -intstyle ise -family spartan3e IR.spl C:/Users/ASUS/Desktop/CPU/CPU-2020-Component/CPU-Component/IR.sym 

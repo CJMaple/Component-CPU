@@ -1,0 +1,12 @@
+[Inputs]
+w_r_control
+CLOCK
+run_M
+[Outputs]
+RAM1_EN
+RAM1_OE
+RAM1_WE
+end_M
+=DATA[15:0]=
+[BiDir]
+=control_state[0:2]=

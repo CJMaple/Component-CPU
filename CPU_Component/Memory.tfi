@@ -1,0 +1,17 @@
+
+
+
+// Instantiate the module
+Memory instance_name (
+    .DATA(DATA), 
+    .RAM1_EN(RAM1_EN), 
+    .RAM1_OE(RAM1_OE), 
+    .RAM1_WE(RAM1_WE), 
+    .control_state(control_state), 
+    .w_r_control(w_r_control), 
+    .CLOCK(CLOCK), 
+    .run_M(run_M), 
+    .end_M(end_M)
+    );
+
+

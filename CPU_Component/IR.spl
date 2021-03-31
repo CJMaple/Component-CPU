@@ -1,0 +1,9 @@
+[Inputs]
+run_IR
+=instruction[15:0]=
+[Outputs]
+=rx[15:0]=
+=ry[15:0]=
+=rz[15:0]=
+=im[15:0]=
+[BiDir]

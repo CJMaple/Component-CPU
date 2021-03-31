@@ -1,0 +1,3 @@
+vhdtdtfi -prj CPU-Component -o C:/Users/ASUS/Desktop/CPU/CPU-2020-Component/CPU-Component/Memory.tfi -module Memory -template F:/Xilinx/14.7/ISE_DS/ISE//data/tfi.tft -deleteonerror -lib work Memory.vhd 
+vhdtdtfi -lib work Memory.vhd -prj CPU-Component -o Memory.spl -module Memory -template F:/Xilinx/14.7/ISE_DS/ISE//data/splfile.tft -deleteonerror 
+spl2sym -intstyle ise -family spartan3e Memory.spl C:/Users/ASUS/Desktop/CPU/CPU-2020-Component/CPU-Component/Memory.sym 
